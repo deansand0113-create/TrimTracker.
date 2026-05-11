@@ -3,124 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TrimTracker | Compare</title>
+  <title>Compare Trims | TrimTracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-<div class="page-shell">
-  <header class="navbar">
-    <a href="index.html" class="brand" aria-label="TrimTracker home"><img src="images/logo.png" alt="TrimTracker logo"></a>
-    <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">☰</button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="trims.html">Trim Levels</a></li>
-      <li><a href="engines.html">Engines</a></li>
-      <li><a href="compare.html" class="active">Compare</a></li>
-      <li><a href="guide.html">Buying Guide</a></li>
-      <li><a href="contact.html">About</a></li>
-    </ul>
+<body data-page="compare.html">
+  <div class="noise"></div>
+  <header class="topbar">
+    <a href="index.html" class="brand"><img src="images/logo.png" alt="TrimTracker logo"><span>TrimTracker</span></a>
+    <button class="menu-toggle" aria-label="Open navigation">☰</button>
+    <nav class="site-nav"><a class="nav-link " href="index.html">Home</a><a class="nav-link " href="trims.html">Trims</a><a class="nav-link active" href="compare.html">Compare</a><a class="nav-link " href="build.html">Build</a><a class="nav-link " href="towing.html">Towing</a><a class="nav-link " href="engines.html">Engines</a><a class="nav-link " href="offroad.html">Off-Road</a><a class="nav-link " href="buyers-guide.html">Buyer Guide</a><a class="nav-link " href="gallery.html">Gallery</a><a class="nav-link " href="guide.html">Project Guide</a><a class="nav-link " href="contact.html">Contact</a></nav>
   </header>
-
-  <section class="hero small">
-    <div class="hero-copy">
-      <span class="eyebrow">Comparison tools</span>
-      <h1>Compare the lineup <span>your way</span>.</h1>
-      <p>This page combines two decision tools. The table gives a fast side-by-side overview, while the trim slider lets you move through the lineup and watch the truck personality shift from work-focused to luxury or extreme off-road.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#sliderTool">Use slider tool</a>
-        <a class="btn btn-secondary" href="guide.html">Open buying guide</a>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="visual-card"><img src="images/platinum.jpg" alt="Ford F-150 Platinum"></div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="pill-row">
-      <div class="pill">Value trucks</div>
-      <div class="pill">Luxury trucks</div>
-      <div class="pill">Off-road trucks</div>
-      <div class="pill">Interactive slider</div>
-    </div>
-  </section>
-
-  <section class="section" id="sliderTool">
-    <div class="section-header">
-      <div class="section-title">
-        <span class="badge">Interactive tool</span>
-        <h2>Trim slider comparison</h2>
-        <p>Slide across the lineup to see how the truck changes in role, feel, and overall personality.</p>
-      </div>
-    </div>
-    <div class="slider-panel">
-      <div class="slider-shell">
-        <div class="slider-label">Move from XL to Raptor</div>
-        <input type="range" min="0" max="7" value="1" id="trimSlider">
-        <div class="compare-slider-output">
-          <div class="truck-focus">
-            <img id="sliderTrimImage" src="images/xlt.jpg" alt="Selected truck">
-            <div class="copy">
-              <h3 id="sliderTrimName">XLT</h3>
-              <p><strong id="sliderTrimRole">Best all-around value</strong></p>
-              <p id="sliderTrimDesc">XLT is the safest pick for most buyers because it adds better styling, better comfort, and strong everyday versatility.</p>
-            </div>
-          </div>
-          <div class="tool-panel">
-            <h3>Personality meters</h3>
-            <p><strong>Towing confidence</strong></p>
-            <div class="meter"><span id="towMeter" style="width:68%"></span></div>
-            <p><strong>Luxury feel</strong></p>
-            <div class="meter"><span id="luxuryMeter" style="width:38%"></span></div>
-            <p><strong>Off-road attitude</strong></p>
-            <div class="meter"><span id="offroadMeter" style="width:32%"></span></div>
-            <p>This is not meant to be an exact factory measurement tool. It is a visual guide to help users quickly understand where each trim sits in the lineup.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="compare-wrap">
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Trim</th>
-              <th>Main Personality</th>
-              <th>Comfort Level</th>
-              <th>Off-Road Focus</th>
-              <th>Typical Buyer</th>
-              <th>Best Use Case</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>XL</td><td>Basic and practical</td><td>Low to moderate</td><td>Low</td><td>Budget-minded owner or fleet buyer</td><td>Work duty and straightforward value</td></tr>
-            <tr><td>XLT</td><td>Balanced and flexible</td><td>Moderate</td><td>Low to moderate</td><td>Everyday truck shopper</td><td>Daily use with strong capability</td></tr>
-            <tr><td>Lariat</td><td>Premium all-rounder</td><td>High</td><td>Moderate</td><td>Buyer wanting comfort + usefulness</td><td>Upscale daily driving and towing</td></tr>
-            <tr><td>King Ranch</td><td>Luxury with personality</td><td>High</td><td>Moderate</td><td>Style-conscious truck buyer</td><td>Premium cruising with distinctive trim identity</td></tr>
-            <tr><td>Platinum</td><td>Modern luxury</td><td>Very high</td><td>Moderate</td><td>Tech- and comfort-focused driver</td><td>Refined premium ownership</td></tr>
-            <tr><td>Limited</td><td>Loaded flagship feel</td><td>Very high</td><td>Low to moderate</td><td>Buyer wanting nearly everything included</td><td>Top-tier comfort and convenience</td></tr>
-            <tr><td>Tremor</td><td>Trail-ready all-rounder</td><td>Moderate to high</td><td>High</td><td>Weekend off-road explorer</td><td>Adventure use without losing normal truck function</td></tr>
-            <tr><td>Raptor</td><td>Extreme performance</td><td>High</td><td>Very high</td><td>Off-road enthusiast</td><td>High-speed dirt, aggressive terrain, standout styling</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <aside class="compare-note">
-        <h3>How to use both tools together</h3>
-        <p>Start with the slider to get a feel for the lineup, then use the table to compare your final few trims more carefully. The slider is better for quick visual understanding. The table is better for narrowing down choices.</p>
-        <h3>Good place to go next</h3>
-        <p>If the compare page gets you down to two or three trims, the buying guide is the next best page because it matches those trims to real buyer types.</p>
-      </aside>
-    </div>
-  </section>
-
+  <main><section class="page-hero"><p class="eyebrow">Interactive Comparison</p><h1>Compare trims by what actually matters.</h1><p>Use the sliders and score cards to compare power, comfort, towing focus, off-road ability, and value.</p></section><section class="section compare-tool"><div class="control-card"><label>Choose Trim A<select id="trimA"></select></label><label>Choose Trim B<select id="trimB"></select></label><button class="btn primary" id="swapTrims">Swap</button></div><div id="compareOutput" class="compare-output"></div></section><section class="section"><h2>Full Comparison Table</h2><div class="table-wrap"><table><tr><th>Trim</th><th>Value</th><th>Luxury</th><th>Towing</th><th>Off-Road</th><th>Best Use</th></tr><tr><td>XL</td><td>10</td><td>3</td><td>7</td><td>4</td><td>Work</td></tr><tr><td>XLT</td><td>9</td><td>5</td><td>7</td><td>5</td><td>Daily</td></tr><tr><td>Lariat</td><td>7</td><td>8</td><td>8</td><td>5</td><td>Premium daily</td></tr><tr><td>Tremor</td><td>6</td><td>7</td><td>8</td><td>9</td><td>Trails</td></tr><tr><td>King Ranch</td><td>5</td><td>10</td><td>8</td><td>5</td><td>Luxury</td></tr><tr><td>Platinum</td><td>5</td><td>10</td><td>8</td><td>5</td><td>Executive truck</td></tr><tr><td>Raptor</td><td>4</td><td>8</td><td>6</td><td>10</td><td>Performance off-road</td></tr></table></div></section></main>
   <footer class="footer">
-    <div><strong>TrimTracker</strong> | Ford F-150 guide</div>
-    <div>Built by Dean Sanders | April 12, 2026</div>
+    <div><strong>TrimTracker</strong><p>A Ford F-150 trim research and comparison project built with interactive tools, detailed pages, and responsive design.</p></div>
+    <div><strong>Final Project Pages</strong><p>Home • Trims • Compare • Build • Towing • Engines • Off-Road • Gallery • Buyer Guide</p></div>
+    <div><strong>Note</strong><p>Specifications are research-based estimates for educational use. Actual pricing and capability vary by configuration.</p></div>
   </footer>
-</div>
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

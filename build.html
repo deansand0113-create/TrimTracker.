@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Build Your F-150 | TrimTracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="build.html">
+  <div class="noise"></div>
+  <header class="topbar">
+    <a href="index.html" class="brand"><img src="images/logo.png" alt="TrimTracker logo"><span>TrimTracker</span></a>
+    <button class="menu-toggle" aria-label="Open navigation">☰</button>
+    <nav class="site-nav"><a class="nav-link " href="index.html">Home</a><a class="nav-link " href="trims.html">Trims</a><a class="nav-link " href="compare.html">Compare</a><a class="nav-link active" href="build.html">Build</a><a class="nav-link " href="towing.html">Towing</a><a class="nav-link " href="engines.html">Engines</a><a class="nav-link " href="offroad.html">Off-Road</a><a class="nav-link " href="buyers-guide.html">Buyer Guide</a><a class="nav-link " href="gallery.html">Gallery</a><a class="nav-link " href="guide.html">Project Guide</a><a class="nav-link " href="contact.html">Contact</a></nav>
+  </header>
+  <main><section class="page-hero"><p class="eyebrow">Configurator</p><h1>Build your ideal F-150.</h1><p>This tool estimates price and gives a recommendation based on trim, engine, color, and packages.</p></section><section class="section build-grid"><div class="builder-panel"><label>Trim<select id="buildTrim"><option value="XL">XL</option><option value="XLT">XLT</option><option value="Lariat">Lariat</option><option value="Tremor">Tremor</option><option value="King Ranch">King Ranch</option><option value="Platinum">Platinum</option><option value="Raptor">Raptor</option></select></label><label>Engine<select id="buildEngine"><option value="2.7L EcoBoost">2.7L EcoBoost V6</option><option value="5.0L V8">5.0L Ti-VCT V8</option><option value="3.5L EcoBoost">3.5L EcoBoost V6</option><option value="PowerBoost Hybrid">3.5L PowerBoost Hybrid</option><option value="Raptor HO">High-Output Performance</option></select></label><label>Color<select id="buildColor"><option>Agate Black</option><option>Oxford White</option><option>Carbonized Gray</option><option>Antimatter Blue</option><option>Rapid Red</option></select></label><div class="check-list"><label><input type="checkbox" class="pkg" value="2200" data-label="FX4 Off-Road Package"> FX4 Off-Road Package</label><label><input type="checkbox" class="pkg" value="1800" data-label="Panoramic Roof"> Panoramic Roof</label><label><input type="checkbox" class="pkg" value="3000" data-label="Premium Wheel Package"> Premium Wheel Package</label><label><input type="checkbox" class="pkg" value="1200" data-label="Tow Technology Package"> Tow Technology Package</label></div></div><div class="truck-preview"><img id="buildImage" src="images/xl.jpg" alt="selected truck"><div class="price-card"><p>Estimated Build</p><h2 id="buildPrice">$38,810</h2><p id="buildSummary">A practical work-focused F-150 build.</p><div id="packageList" class="chips"></div></div></div></section></main>
+  <footer class="footer">
+    <div><strong>TrimTracker</strong><p>A Ford F-150 trim research and comparison project built with interactive tools, detailed pages, and responsive design.</p></div>
+    <div><strong>Final Project Pages</strong><p>Home • Trims • Compare • Build • Towing • Engines • Off-Road • Gallery • Buyer Guide</p></div>
+    <div><strong>Note</strong><p>Specifications are research-based estimates for educational use. Actual pricing and capability vary by configuration.</p></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

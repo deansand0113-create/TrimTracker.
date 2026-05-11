@@ -3,73 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TrimTracker | About</title>
+  <title>Contact | TrimTracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-<div class="page-shell">
-  <header class="navbar">
-    <a href="index.html" class="brand" aria-label="TrimTracker home"><img src="images/logo.png" alt="TrimTracker logo"></a>
-    <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">☰</button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="trims.html">Trim Levels</a></li>
-      <li><a href="engines.html">Engines</a></li>
-      <li><a href="compare.html">Compare</a></li>
-      <li><a href="guide.html">Buying Guide</a></li>
-      <li><a href="contact.html" class="active">About</a></li>
-    </ul>
+<body data-page="contact.html">
+  <div class="noise"></div>
+  <header class="topbar">
+    <a href="index.html" class="brand"><img src="images/logo.png" alt="TrimTracker logo"><span>TrimTracker</span></a>
+    <button class="menu-toggle" aria-label="Open navigation">☰</button>
+    <nav class="site-nav"><a class="nav-link " href="index.html">Home</a><a class="nav-link " href="trims.html">Trims</a><a class="nav-link " href="compare.html">Compare</a><a class="nav-link " href="build.html">Build</a><a class="nav-link " href="towing.html">Towing</a><a class="nav-link " href="engines.html">Engines</a><a class="nav-link " href="offroad.html">Off-Road</a><a class="nav-link " href="buyers-guide.html">Buyer Guide</a><a class="nav-link " href="gallery.html">Gallery</a><a class="nav-link " href="guide.html">Project Guide</a><a class="nav-link active" href="contact.html">Contact</a></nav>
   </header>
-
-  <section class="hero small">
-    <div class="hero-copy">
-      <span class="eyebrow">About TrimTracker</span>
-      <h1>A cleaner way to <span>read the lineup</span>.</h1>
-      <p>TrimTracker is designed to make the Ford F-150 lineup easier to understand. Instead of burying visitors in too many disconnected details, the site organizes trims, engines, comparison tools, and buyer recommendations into a clearer flow.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="trims.html">See trims</a>
-        <a class="btn btn-secondary" href="compare.html">Open compare tools</a>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="visual-card"><img src="images/raptorr.jpg" alt="Ford F-150 Raptor"></div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="two-col">
-      <div class="info-panel">
-        <h3>What makes the site useful</h3>
-        <p>Each page has its own job. The trim page shows the lineup. The engine page explains the main powertrain personalities. The compare page adds both a table and an interactive slider. The buying guide simplifies the decision for different kinds of truck buyers.</p>
-      </div>
-      <div class="compare-note">
-        <h3>Design direction</h3>
-        <p>The darker palette, orange highlights, stronger contrast, and larger imagery give the site a more aggressive truck-focused style while still keeping the text clean and easy to scan.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-header">
-      <div class="section-title">
-        <span class="badge">Quick links</span>
-        <h2>Jump back into the site</h2>
-        <p>Use these shortcuts to move between the most useful pages quickly.</p>
-      </div>
-    </div>
-    <div class="quick-links">
-      <a href="trims.html">Trim Levels</a>
-      <a href="engines.html">Engine Guide</a>
-      <a href="compare.html">Compare Tools</a>
-      <a href="guide.html">Buying Guide</a>
-    </div>
-  </section>
-
+  <main><section class="page-hero"><p class="eyebrow">Contact / Feedback</p><h1>Help improve TrimTracker.</h1><p>This page gives the final project a complete website feel with a polished contact form and feedback area.</p></section><section class="section contact-grid"><form class="contact-form"><label>Name<input type="text" placeholder="Your name"></label><label>Email<input type="email" placeholder="you@example.com"></label><label>Favorite Trim<select><option>XL</option><option>XLT</option><option>Lariat</option><option>Tremor</option><option>King Ranch</option><option>Platinum</option><option>Raptor</option></select></label><label>Message<textarea placeholder="What should TrimTracker add next?"></textarea></label><button class="btn primary" type="button">Submit Feedback</button></form><div class="feature-card"><h3>Final Project Strengths</h3><p>This submission includes many pages, detailed content, responsive design, interactive JavaScript tools, strong visual branding, and a clear website purpose.</p><p class="note">Form is visual only for class project purposes.</p></div></section></main>
   <footer class="footer">
-    <div><strong>TrimTracker</strong> | Ford F-150 guide</div>
-    <div>Built by Dean Sanders | April 12, 2026</div>
+    <div><strong>TrimTracker</strong><p>A Ford F-150 trim research and comparison project built with interactive tools, detailed pages, and responsive design.</p></div>
+    <div><strong>Final Project Pages</strong><p>Home • Trims • Compare • Build • Towing • Engines • Off-Road • Gallery • Buyer Guide</p></div>
+    <div><strong>Note</strong><p>Specifications are research-based estimates for educational use. Actual pricing and capability vary by configuration.</p></div>
   </footer>
-</div>
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

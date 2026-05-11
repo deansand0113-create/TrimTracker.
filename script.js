@@ -1,96 +1,14 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const toggle = document.getElementById('mobileToggle');
-  const nav = document.getElementById('navLinks');
-  if (toggle && nav) {
-    toggle.addEventListener('click', () => nav.classList.toggle('show'));
-    nav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => nav.classList.remove('show'));
-    });
-  }
 
-  const slider = document.getElementById('trimSlider');
-  const outputName = document.getElementById('sliderTrimName');
-  const outputRole = document.getElementById('sliderTrimRole');
-  const outputImg = document.getElementById('sliderTrimImage');
-  const outputDesc = document.getElementById('sliderTrimDesc');
-  const towBar = document.getElementById('towMeter');
-  const luxuryBar = document.getElementById('luxuryMeter');
-  const offroadBar = document.getElementById('offroadMeter');
-
-  const trims = [
-    {
-      name:'XL',
-      role:'Work-truck value',
-      img:'images/xl.jpg',
-      desc:'XL is the straightforward starting point: simple, useful, and focused on getting truck jobs done without extra flash.',
-      tow:55, luxury:20, offroad:25
-    },
-    {
-      name:'XLT',
-      role:'Best all-around value',
-      img:'images/xlt.jpg',
-      desc:'XLT is the safest pick for most buyers because it adds better styling, better comfort, and strong everyday versatility.',
-      tow:68, luxury:38, offroad:32
-    },
-    {
-      name:'Lariat',
-      role:'Premium daily driver',
-      img:'images/lariat.jpg',
-      desc:'Lariat steps into a more premium feel with stronger comfort, technology, and a polished overall personality.',
-      tow:82, luxury:72, offroad:40
-    },
-    {
-      name:'King Ranch',
-      role:'Distinctive luxury',
-      img:'images/kingranch.jpg',
-      desc:'King Ranch mixes high-end comfort with a western-inspired design identity that stands out from the rest of the lineup.',
-      tow:82, luxury:82, offroad:40
-    },
-    {
-      name:'Platinum',
-      role:'Modern luxury',
-      img:'images/platinum.jpg',
-      desc:'Platinum is the clean, upscale, tech-focused premium F-150 for buyers who want refinement without losing truck capability.',
-      tow:82, luxury:88, offroad:38
-    },
-    {
-      name:'Limited',
-      role:'Flagship comfort',
-      img:'images/limited.jpg',
-      desc:'Limited leans into a loaded, top-spec feel for buyers who want most of the premium equipment already included.',
-      tow:78, luxury:92, offroad:30
-    },
-    {
-      name:'Tremor',
-      role:'Off-road all-rounder',
-      img:'images/tremor.jpg',
-      desc:'Tremor brings real off-road attitude while still feeling like a usable daily truck instead of a full specialty machine.',
-      tow:72, luxury:58, offroad:80
-    },
-    {
-      name:'Raptor',
-      role:'Extreme off-road performance',
-      img:'images/raptorr.jpg',
-      desc:'Raptor is the aggressive showpiece of the lineup with the boldest stance, the strongest off-road vibe, and the most performance character.',
-      tow:70, luxury:70, offroad:98
-    }
-  ];
-
-  function updateSlider(index){
-    const trim = trims[index];
-    if(!trim || !outputName) return;
-    outputName.textContent = trim.name;
-    outputRole.textContent = trim.role;
-    outputImg.src = trim.img;
-    outputImg.alt = trim.name + ' image';
-    outputDesc.textContent = trim.desc;
-    towBar.style.width = trim.tow + '%';
-    luxuryBar.style.width = trim.luxury + '%';
-    offroadBar.style.width = trim.offroad + '%';
-  }
-
-  if (slider) {
-    updateSlider(Number(slider.value));
-    slider.addEventListener('input', (e) => updateSlider(Number(e.target.value)));
-  }
-});
+const $=(q)=>document.querySelector(q);const $$=(q)=>document.querySelectorAll(q);
+const trims={XL:{price:38810,img:'images/xl.jpg',scores:{Value:10,Luxury:3,Towing:7,Offroad:4,Tech:4},summary:'A practical work-focused F-150 build with the lowest cost and strongest value.'},XLT:{price:45695,img:'images/xlt.jpg',scores:{Value:9,Luxury:5,Towing:7,Offroad:5,Tech:6},summary:'The balanced daily-driver choice with better comfort, looks, and features.'},Lariat:{price:63360,img:'images/lariat.jpg',scores:{Value:7,Luxury:8,Towing:8,Offroad:5,Tech:8},summary:'A premium daily truck with stronger comfort and technology.'},Tremor:{price:64915,img:'images/tremor.jpg',scores:{Value:6,Luxury:7,Towing:8,Offroad:9,Tech:8},summary:'The trail-focused F-150 for off-road use without going full Raptor.'},'King Ranch':{price:74905,img:'images/kingranch.jpg',scores:{Value:5,Luxury:10,Towing:8,Offroad:5,Tech:9},summary:'A luxury truck with western style, comfort, and strong road presence.'},Platinum:{price:74905,img:'images/platinum.jpg',scores:{Value:5,Luxury:10,Towing:8,Offroad:5,Tech:10},summary:'A polished executive-style F-150 with premium technology and comfort.'},Raptor:{price:79005,img:'images/raptor.jpg',scores:{Value:4,Luxury:8,Towing:6,Offroad:10,Tech:9},summary:'The aggressive performance off-road choice with maximum attitude.'}};
+const engineAdd={'2.7L EcoBoost':0,'5.0L V8':1800,'3.5L EcoBoost':2600,'PowerBoost Hybrid':4200,'Raptor HO':9500};
+function initNav(){const b=$('.menu-toggle'),n=$('.site-nav');if(b&&n)b.onclick=()=>n.classList.toggle('open')}
+function initCounters(){const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');if(e.target.classList.contains('counter'))count(e.target);}})},{threshold:.2});$$('.reveal,.counter').forEach(el=>obs.observe(el));}
+function count(el){if(el.dataset.done)return;el.dataset.done=1;let target=+el.dataset.target,cur=0,inc=Math.max(1,target/80);let t=setInterval(()=>{cur+=inc;if(cur>=target){cur=target;clearInterval(t)}el.textContent=Math.floor(cur).toLocaleString()},18)}
+function initCompare(){const a=$('#trimA'),b=$('#trimB'),out=$('#compareOutput');if(!a||!b)return;Object.keys(trims).forEach(t=>{a.add(new Option(t,t));b.add(new Option(t,t))});a.value='XLT';b.value='Raptor';function card(name){let data=trims[name];let bars=Object.entries(data.scores).map(([k,v])=>`<div class="score-row"><b>${k}</b><div class="bar"><span style="width:${v*10}%"></span></div></div>`).join('');return `<article class="truck-card"><img src="${data.img}"><span class="badge">${name}</span><h3>${name}</h3><p>${data.summary}</p>${bars}<p><b>Estimated start:</b> $${data.price.toLocaleString()}</p></article>`}function render(){out.innerHTML=card(a.value)+card(b.value)}a.onchange=render;b.onchange=render;$('#swapTrims').onclick=()=>{let x=a.value;a.value=b.value;b.value=x;render()};render()}
+function initBuild(){const trim=$('#buildTrim'),eng=$('#buildEngine'),price=$('#buildPrice'),img=$('#buildImage'),summary=$('#buildSummary'),packages=$$('#buildTrim,#buildEngine,.pkg,#buildColor');if(!trim)return;function update(){let t=trims[trim.value],total=t.price+(engineAdd[eng.value]||0);let chips=[];$$('.pkg:checked').forEach(p=>{total+=+p.value;chips.push(`<span>${p.dataset.label}</span>`)});price.textContent='$'+total.toLocaleString();img.src=t.img;summary.textContent=t.summary+' Engine selected: '+eng.value+'. Color: '+$('#buildColor').value+'.';$('#packageList').innerHTML=chips.join('')||'<span>No added packages</span>'}packages.forEach(x=>x.addEventListener('change',update));update()}
+function initTow(){const tw=$('#trailerWeight'),cw=$('#cargoWeight'),res=$('#towResult');if(!tw)return;function update(){let trailer=+tw.value,cargo=+cw.value,total=trailer+cargo;$('#trailerVal').textContent=trailer.toLocaleString();$('#cargoVal').textContent=cargo.toLocaleString();let status='good',label='Comfortable',rec='2.7L EcoBoost, 5.0L V8, or XLT/Lariat depending on budget.';if(total>8500){status='warn';label='Heavy Setup';rec='3.5L EcoBoost or PowerBoost Hybrid with towing package.'}if(total>12000){status='bad';label='Maximum-Capability Zone';rec='3.5L EcoBoost with Max Trailer Tow Package and careful payload planning.'}res.innerHTML=`<span class="status ${status}">${label}</span><h2>${total.toLocaleString()} lb combined estimate</h2><p><b>Recommended setup:</b> ${rec}</p><p>Always verify the exact truck door sticker, axle ratio, payload rating, hitch rating, and Ford towing guide before towing in real life.</p>`}tw.oninput=update;cw.oninput=update;$('#towFreq').onchange=update;update()}
+function initTerrain(){const r=$('#terrainResult');if(!r)return;const data={sand:['Raptor','Wide stance, performance suspension, and high-speed desert personality make the Raptor the strongest sand choice.'],mud:['Tremor','Tremor gives trail hardware, grip, skid plates, and a practical off-road setup for messy terrain.'],rock:['Tremor','For rockier trails, Tremor is the better practical pick because it focuses on control and trail durability.'],snow:['FX4 or Tremor','Snow depends more on tires and driver control, but FX4/Tremor hardware gives extra confidence.']};function show(k){r.innerHTML=`<h2>${data[k][0]}</h2><p>${data[k][1]}</p>`}$$('.terrain-buttons button').forEach(btn=>btn.onclick=()=>show(btn.dataset.terrain));show('sand')}
+function initQuiz(){const btn=$('#quizBtn'),out=$('#quizResult');if(!btn)return;btn.onclick=()=>{let use=$('#qUse').value,b=$('#qBudget').value,tech=$('#qTech').value,rec='XLT',why='It is the best all-around balance of price, features, and daily usability.';if(use==='work'||b==='high'){rec='XL or XLT';why='These keep cost lower while still giving real F-150 capability.'}if(use==='tow'){rec='Lariat or XLT with 3.5L EcoBoost';why='Towing buyers should prioritize engine, axle, and trailer tech over luxury only.'}if(use==='offroad'){rec='Tremor';why='Tremor gives serious off-road hardware while staying more practical than Raptor.'}if(use==='luxury'||tech==='high'&&b==='low'){rec='Platinum or King Ranch';why='These trims focus on comfort, interior quality, and technology.'}if(use==='offroad'&&b==='low'){rec='Raptor';why='Raptor is the most aggressive performance off-road F-150.'}out.innerHTML=`<h2>${rec}</h2><p>${why}</p>`}}
+function initGallery(){const imgs=$$('.gallery-grid img');if(!imgs.length)return;$$('.filter-row button').forEach(btn=>btn.onclick=()=>{let f=btn.dataset.filter;imgs.forEach(img=>img.style.display=(f==='all'||img.dataset.cat===f)?'block':'none')})}
+document.addEventListener('DOMContentLoaded',()=>{initNav();initCounters();initCompare();initBuild();initTow();initTerrain();initQuiz();initGallery();});

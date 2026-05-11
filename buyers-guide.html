@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buyer Guide | TrimTracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="buyers-guide.html">
+  <div class="noise"></div>
+  <header class="topbar">
+    <a href="index.html" class="brand"><img src="images/logo.png" alt="TrimTracker logo"><span>TrimTracker</span></a>
+    <button class="menu-toggle" aria-label="Open navigation">☰</button>
+    <nav class="site-nav"><a class="nav-link " href="index.html">Home</a><a class="nav-link " href="trims.html">Trims</a><a class="nav-link " href="compare.html">Compare</a><a class="nav-link " href="build.html">Build</a><a class="nav-link " href="towing.html">Towing</a><a class="nav-link " href="engines.html">Engines</a><a class="nav-link " href="offroad.html">Off-Road</a><a class="nav-link active" href="buyers-guide.html">Buyer Guide</a><a class="nav-link " href="gallery.html">Gallery</a><a class="nav-link " href="guide.html">Project Guide</a><a class="nav-link " href="contact.html">Contact</a></nav>
+  </header>
+  <main><section class="page-hero"><p class="eyebrow">Decision Guide</p><h1>Which F-150 should you actually buy?</h1><p>Answer the quick quiz and use the guide below to match a trim to your lifestyle.</p></section><section class="section quiz-grid"><div class="builder-panel"><label>Budget Priority<select id="qBudget"><option value="high">Keep price low</option><option value="medium">Balanced</option><option value="low">Premium is fine</option></select></label><label>Use Case<select id="qUse"><option value="daily">Daily driving</option><option value="tow">Towing</option><option value="offroad">Off-road</option><option value="luxury">Luxury</option><option value="work">Work truck</option></select></label><label>Technology Need<select id="qTech"><option value="low">Basic</option><option value="medium">Helpful</option><option value="high">High-end</option></select></label><button class="btn primary" id="quizBtn">Get Recommendation</button></div><div id="quizResult" class="result-card"><h2>Your result will appear here.</h2><p>Choose your priorities and let TrimTracker recommend a trim.</p></div></section><section class="section"><h2>Best Trim by Buyer Type</h2><div class="table-wrap"><table><tr><th>Buyer</th><th>Recommended Trim</th><th>Reason</th></tr><tr><td>Lowest price</td><td>XL</td><td>Real truck capability with fewer extras.</td></tr><tr><td>Best all-around</td><td>XLT</td><td>Good comfort, price, and everyday usability.</td></tr><tr><td>Premium daily</td><td>Lariat</td><td>Better cabin without the highest price tier.</td></tr><tr><td>Trail use</td><td>Tremor</td><td>Off-road hardware while staying practical.</td></tr><tr><td>Luxury</td><td>King Ranch / Platinum</td><td>High-end interiors, tech, and comfort.</td></tr><tr><td>Performance</td><td>Raptor</td><td>Maximum attitude and off-road capability.</td></tr></table></div></section></main>
+  <footer class="footer">
+    <div><strong>TrimTracker</strong><p>A Ford F-150 trim research and comparison project built with interactive tools, detailed pages, and responsive design.</p></div>
+    <div><strong>Final Project Pages</strong><p>Home • Trims • Compare • Build • Towing • Engines • Off-Road • Gallery • Buyer Guide</p></div>
+    <div><strong>Note</strong><p>Specifications are research-based estimates for educational use. Actual pricing and capability vary by configuration.</p></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

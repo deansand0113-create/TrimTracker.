@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Towing Calculator | TrimTracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="towing.html">
+  <div class="noise"></div>
+  <header class="topbar">
+    <a href="index.html" class="brand"><img src="images/logo.png" alt="TrimTracker logo"><span>TrimTracker</span></a>
+    <button class="menu-toggle" aria-label="Open navigation">☰</button>
+    <nav class="site-nav"><a class="nav-link " href="index.html">Home</a><a class="nav-link " href="trims.html">Trims</a><a class="nav-link " href="compare.html">Compare</a><a class="nav-link " href="build.html">Build</a><a class="nav-link active" href="towing.html">Towing</a><a class="nav-link " href="engines.html">Engines</a><a class="nav-link " href="offroad.html">Off-Road</a><a class="nav-link " href="buyers-guide.html">Buyer Guide</a><a class="nav-link " href="gallery.html">Gallery</a><a class="nav-link " href="guide.html">Project Guide</a><a class="nav-link " href="contact.html">Contact</a></nav>
+  </header>
+  <main><section class="page-hero"><p class="eyebrow">Capability Calculator</p><h1>Match your truck to your trailer.</h1><p>Move the sliders to estimate whether a setup is light, moderate, heavy, or better suited for a stronger engine/package.</p></section><section class="section towing-grid"><div class="slider-card"><label>Trailer Weight: <b><span id="trailerVal">6500</span> lb</b><input id="trailerWeight" type="range" min="1000" max="14000" value="6500" step="250"></label><label>Cargo + Passengers: <b><span id="cargoVal">800</span> lb</b><input id="cargoWeight" type="range" min="0" max="2500" value="800" step="100"></label><label>How Often Do You Tow?<select id="towFreq"><option>Occasionally</option><option>Monthly</option><option>Weekly</option></select></label></div><div class="result-card" id="towResult"></div></section><section class="section"><h2>General Engine Towing Roles</h2><div class="feature-grid"><div class="feature-card"><h3>2.7L EcoBoost</h3><p>Great for daily driving and lighter trailers. Best for people who care about efficiency and do not tow heavy every week.</p></div><div class="feature-card"><h3>5.0L V8</h3><p>Classic truck feel with strong capability, simple personality, and good fit for buyers who like naturally aspirated power.</p></div><div class="feature-card"><h3>3.5L EcoBoost</h3><p>The go-to heavy towing engine. Strong torque and top capability when properly equipped.</p></div><div class="feature-card"><h3>PowerBoost Hybrid</h3><p>Strong torque plus generator-style utility through Pro Power Onboard. Great for campsites, tools, and job sites.</p></div></div></section></main>
+  <footer class="footer">
+    <div><strong>TrimTracker</strong><p>A Ford F-150 trim research and comparison project built with interactive tools, detailed pages, and responsive design.</p></div>
+    <div><strong>Final Project Pages</strong><p>Home • Trims • Compare • Build • Towing • Engines • Off-Road • Gallery • Buyer Guide</p></div>
+    <div><strong>Note</strong><p>Specifications are research-based estimates for educational use. Actual pricing and capability vary by configuration.</p></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

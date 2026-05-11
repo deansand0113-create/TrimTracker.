@@ -3,104 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TrimTracker</title>
-  <meta name="description" content="TrimTracker helps users explore Ford F-150 trims, engines, features, and buying decisions." />
+  <title>Home | TrimTracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-<div class="page-shell">
-  <header class="navbar">
-    <a href="index.html" class="brand" aria-label="TrimTracker home"><img src="images/logo.png" alt="TrimTracker logo"></a>
-    <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">☰</button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="trims.html">Trim Levels</a></li>
-      <li><a href="engines.html">Engines</a></li>
-      <li><a href="compare.html">Compare</a></li>
-      <li><a href="guide.html">Buying Guide</a></li>
-      <li><a href="contact.html">About</a></li>
-    </ul>
+<body data-page="index.html">
+  <div class="noise"></div>
+  <header class="topbar">
+    <a href="index.html" class="brand"><img src="images/logo.png" alt="TrimTracker logo"><span>TrimTracker</span></a>
+    <button class="menu-toggle" aria-label="Open navigation">☰</button>
+    <nav class="site-nav"><a class="nav-link active" href="index.html">Home</a><a class="nav-link " href="trims.html">Trims</a><a class="nav-link " href="compare.html">Compare</a><a class="nav-link " href="build.html">Build</a><a class="nav-link " href="towing.html">Towing</a><a class="nav-link " href="engines.html">Engines</a><a class="nav-link " href="offroad.html">Off-Road</a><a class="nav-link " href="buyers-guide.html">Buyer Guide</a><a class="nav-link " href="gallery.html">Gallery</a><a class="nav-link " href="guide.html">Project Guide</a><a class="nav-link " href="contact.html">Contact</a></nav>
   </header>
-
-  <section class="hero">
-    <div class="hero-copy">
-      <span class="eyebrow">Built for truck shoppers</span>
-      <h1>Track the trim. <span>Own the decision.</span></h1>
-      <p>TrimTracker is a darker, more aggressive F-150 guide built around truck personality, capability, and style. Instead of just dumping specs on one page, it breaks the lineup into clearer pages for trims, engines, comparisons, and buyer-focused recommendations.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="trims.html">Explore the lineup</a>
-        <a class="btn btn-secondary" href="compare.html">Compare trucks</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat"><strong>8</strong><span>featured truck styles</span></div>
-        <div class="stat"><strong>6</strong><span>connected pages</span></div>
-        <div class="stat"><strong>2</strong><span>comparison tools</span></div>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="visual-card"><img src="images/hero-truck.png" alt="Ford F-150 hero image"></div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-header">
-      <div class="section-title">
-        <span class="badge">Fast start</span>
-        <h2>Choose how you want to shop</h2>
-        <p>Different pages answer different questions, so users can get to what matters faster.</p>
-      </div>
-    </div>
-    <div class="card-grid">
-      <article class="card">
-        <img src="images/xlt.jpg" alt="Ford F-150 XLT">
-        <div class="card-content">
-          <h3>Browse by trim</h3>
-          <p>See how the lineup changes from simple work-truck value to premium comfort and full off-road presence.</p>
-          <a class="btn btn-secondary" href="trims.html">View trims</a>
-        </div>
-      </article>
-      <article class="card">
-        <img src="images/lariat.jpg" alt="Ford F-150 Lariat">
-        <div class="card-content">
-          <h3>Browse by engine</h3>
-          <p>Figure out whether your best match is an easy daily-driver setup, a V8 feel, hybrid power, or a harder-hitting performance option.</p>
-          <a class="btn btn-secondary" href="engines.html">View engines</a>
-        </div>
-      </article>
-      <article class="card">
-        <img src="images/raptorr.jpg" alt="Ford F-150 Raptor">
-        <div class="card-content">
-          <h3>Use compare tools</h3>
-          <p>Jump to a side-by-side table and an interactive trim slider to narrow down the best truck faster.</p>
-          <a class="btn btn-secondary" href="compare.html">Open tools</a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="two-col">
-      <div class="callout">
-        <span class="badge">Site vibe</span>
-        <h2>More aggressive. More truck-centered.</h2>
-        <p>This version leans into a darker performance-inspired look, stronger contrast, more image-heavy sections, and a navigation flow that feels closer to a real enthusiast site.</p>
-      </div>
-      <div class="feature-panel">
-        <h3>Best route through the site</h3>
-        <div class="timeline">
-          <div class="timeline-item"><h3>1. Trim Levels</h3><p>Find the part of the lineup that matches your budget and personality.</p></div>
-          <div class="timeline-item"><h3>2. Engines</h3><p>See what type of powertrain feel matches the way the truck will actually be used.</p></div>
-          <div class="timeline-item"><h3>3. Compare</h3><p>Use the table and slider tool to narrow the lineup down to one or two final choices.</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  <main>
+<section class="hero">
+  <div class="hero-content reveal"><p class="eyebrow">Ford F-150 Trim Research Platform</p><h1>Built for Work. Tuned for Power.</h1><p>TrimTracker helps shoppers compare F-150 trims, engines, towing ability, off-road hardware, pricing, and real-world use cases in one aggressive, easy-to-use website.</p><div class="hero-actions"><a class="btn primary" href="compare.html">Compare Trims</a><a class="btn ghost" href="build.html">Build Your Truck</a></div></div>
+  <div class="hero-panel reveal"><img src="images/hero-truck.png" alt="Ford F-150 hero truck"><div class="spec-strip"><span><b class="counter" data-target="13500">0</b> lb max tow</span><span><b class="counter" data-target="720">0</b> hp available</span><span><b class="counter" data-target="11">0</b> pages</span></div></div>
+</section>
+<section class="section"><div class="section-heading"><p class="eyebrow">Why this site wins</p><h2>More than a brochure — it is a decision tool.</h2><p>Instead of listing trims only, TrimTracker explains which truck is right for different drivers: work crews, daily commuters, towers, off-roaders, and luxury buyers.</p></div><div class="feature-grid"><div class="feature-card"><h3>Interactive Build Tool</h3><p>Select trim, engine, color, and packages while the price and recommendation update instantly.</p></div><div class="feature-card"><h3>Towing Calculator</h3><p>Enter trailer and cargo weight to see whether your setup is light, moderate, heavy, or over the comfort zone.</p></div><div class="feature-card"><h3>Trim Match Quiz</h3><p>Compare lifestyle needs like budget, off-road use, towing, tech, and luxury to get a recommended F-150 trim.</p></div></div></section>
+<section class="section dark-split"><div><p class="eyebrow">Featured trims</p><h2>From XL work truck to Raptor chaos.</h2><p>Every F-150 trim has a purpose. The best final project version makes those differences clear through visuals, detailed descriptions, interactive sliders, and honest recommendations.</p><a class="btn primary" href="trims.html">Explore All Trims</a></div>
+<div class="trim-grid">
+  <article class="truck-card"><img src="images/xl.jpg"><span class="badge">Work Ready</span><h3>XL</h3><p>The simple, durable entry point: vinyl options, practical tech, and the right fit for fleets, work crews, and budget-minded buyers.</p><ul><li>Best for: work truck use</li><li>Strength: value and simplicity</li><li>Upgrade path: STX/XLT styling and tech</li></ul></article>
+  <article class="truck-card"><img src="images/xlt.jpg"><span class="badge">Daily Pick</span><h3>XLT</h3><p>The sweet spot for many drivers because it blends affordability, chrome or sport styling, better cabin features, and useful daily comfort.</p><ul><li>Best for: daily driving</li><li>Strength: balanced price/features</li><li>Upgrade path: FX4 and tow packages</li></ul></article>
+  <article class="truck-card"><img src="images/lariat.jpg"><span class="badge">Tech + Comfort</span><h3>Lariat</h3><p>A premium middle trim with major comfort upgrades, stronger technology, leather-trimmed feel, and a more upscale cabin experience.</p><ul><li>Best for: refined daily driving</li><li>Strength: luxury without max price</li><li>Upgrade path: premium audio and driver assist</li></ul></article>
+  <article class="truck-card"><img src="images/tremor.jpg"><span class="badge">Trail Built</span><h3>Tremor</h3><p>Designed for people who want real off-road hardware without jumping all the way to the Raptor price and performance category.</p><ul><li>Best for: hunting, trails, dirt roads</li><li>Strength: off-road capability</li><li>Upgrade path: winch-ready and trail tech</li></ul></article>
+  <article class="truck-card"><img src="images/kingranch.jpg"><span class="badge">Western Luxury</span><h3>King Ranch</h3><p>A luxury truck with signature interior styling, comfort features, and a more distinct personality than a standard premium trim.</p><ul><li>Best for: luxury with character</li><li>Strength: interior design</li><li>Upgrade path: towing and hybrid power</li></ul></article>
+  <article class="truck-card"><img src="images/platinum.jpg"><span class="badge">Executive</span><h3>Platinum</h3><p>A high-end street-focused trim aimed at buyers who want comfort, technology, towing confidence, and a polished daily-driving experience.</p><ul><li>Best for: premium commuting</li><li>Strength: comfort and technology</li><li>Upgrade path: PowerBoost hybrid</li></ul></article>
+  <article class="truck-card"><img src="images/raptor.jpg"><span class="badge">Desert Monster</span><h3>Raptor</h3><p>The performance halo truck with wide-body styling, serious suspension, aggressive stance, and a completely different mission than normal trims.</p><ul><li>Best for: high-speed off-road</li><li>Strength: suspension and performance</li><li>Upgrade path: Raptor R power</li></ul></article>
+</div></section>
+<section class="section"><div class="section-heading"><p class="eyebrow">Capability snapshot</p><h2>Pick the right truck by mission.</h2></div><div class="mission-grid"><a href="buyers-guide.html"><b>Best Budget</b><span>XL / XLT</span></a><a href="towing.html"><b>Best Towing</b><span>3.5L EcoBoost</span></a><a href="offroad.html"><b>Best Trails</b><span>Tremor / Raptor</span></a><a href="engines.html"><b>Best Tech</b><span>PowerBoost Hybrid</span></a></div></section>
+</main>
   <footer class="footer">
-    <div><strong>TrimTracker</strong> | Ford F-150 guide</div>
-    <div>Built by Dean Sanders | April 12, 2026</div>
+    <div><strong>TrimTracker</strong><p>A Ford F-150 trim research and comparison project built with interactive tools, detailed pages, and responsive design.</p></div>
+    <div><strong>Final Project Pages</strong><p>Home • Trims • Compare • Build • Towing • Engines • Off-Road • Gallery • Buyer Guide</p></div>
+    <div><strong>Note</strong><p>Specifications are research-based estimates for educational use. Actual pricing and capability vary by configuration.</p></div>
   </footer>
-</div>
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
